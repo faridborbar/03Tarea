@@ -6,7 +6,7 @@ from scipy import optimize as opti
 
 
 def funcionvectorial(sn,yn,zn):
-    u=1.871
+    u=0.4
     f_1=zn
     f_2=-yn-u*(yn**2 - 1)*zn
 
@@ -54,7 +54,7 @@ Y=[]
 Z=[]
 S=[]
 W_ini=np.append(W_ini,0)
-W_ini=np.append(W_ini,0.1)
+W_ini=np.append(W_ini,4)
 W_ini=np.append(W_ini,0)
 
 
@@ -72,8 +72,8 @@ for i in range(0,n-1):
 
 plt.plot(Y,Z)
 #plt.plot(S,Y)
-#plt.ylabel('Velocidad luego del impacto: Vn+1')
-#plt.xlabel('Numero de intento')
-#plt.axis([0,(Iteraciones + 5),0,3])
+plt.xlabel('Tiempo s')
+plt.ylabel('variable y')
+plt.title("Osilador Van der Pool")
 plt.draw()
 plt.show()
